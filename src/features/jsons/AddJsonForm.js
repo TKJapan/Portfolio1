@@ -29,6 +29,9 @@ const AddJsonForm = () => {
                     photo,
                 })
             ) 
+            inputTitle.current.value = ""
+        inputContent.current.value = ""
+        inputPhoto.current.value = ""
         }
     }
 

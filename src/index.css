@@ -21,11 +21,21 @@ code {
 }
 .item {
   padding: 0.5em 1em;
-    margin: 2em 0;
-    color: black;
-    background: #c6e4ff;
-    border-bottom: solid 6px #aac5de;
-    border-radius: 9px;
+  margin: 2em 0;
+  color: black;
+  background: #c6e4ff;
+  border-bottom: solid 6px #aac5de;
+  border-right: solid 6px #aac5de;
+  border-radius: 9px;
+}
+.item:hover {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: black;
+  background: #10c7d4;
+  border-bottom: solid 6px #092138;
+  border-right: solid 6px #092138;
+  border-radius: 9px;
 }
 .photo {
   border-radius: 9px;

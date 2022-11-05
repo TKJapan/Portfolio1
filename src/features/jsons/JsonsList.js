@@ -23,8 +23,6 @@ export const JsonsList = () => {
           <JsonItem key={json.id} json={json} />
         ))}
         </ul>
-        
-        {console.log(typeof(jsons))}
     </section>
   )
 }
