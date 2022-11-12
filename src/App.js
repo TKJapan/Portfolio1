@@ -11,6 +11,7 @@ import {
 import { JsonsList } from './features/jsons/JsonsList';
 import AddJsonForm from './features/jsons/AddJsonForm'
 import JsonDescription from './features/component/JsonDescription';
+import EditJsonForm from './features/component/EditJsonForm';
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
             eaxct 
             path="/description/:jsonId"
             component={JsonDescription}
-            />
+          />
+          <Route exact path="/editJson/:jsonId" component={EditJsonForm}/>
             <Redirect to="/" />
       </Switch>
     </div>

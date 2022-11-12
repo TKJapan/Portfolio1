@@ -1,14 +1,14 @@
 {
   "jsons": [
     {
-      "id": 1,
-      "title": "Thor",
+      "id": "1",
+      "title": "ソー",
       "content": "God of Thunder",
       "photo": "https://d1uzk9o9cg136f.cloudfront.net/f/16782943/rc/2022/06/28/c44856254ba14fed776abba603ffc02476ae4419.jpg"
     },
     {
-      "id": 2,
-      "title": "Loki",
+      "id": "2",
+      "title": "ロキ",
       "content": "God of Mischief",
       "photo": "https://disneyplus.disney.co.jp/content/disney/disneyplus/home/program/loki/_jcr_content/par/textbox_component/textbox_component_par/image_text_1851638074/image1.img.jpg/1622009599517.jpg"
     },

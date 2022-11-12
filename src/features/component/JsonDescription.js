@@ -2,6 +2,8 @@ import { createSelector } from '@reduxjs/toolkit'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 const JsonDescription = ({match}) => {
     const { jsonId } = match.params
@@ -31,7 +33,9 @@ const JsonDescription = ({match}) => {
           <br />
           <img src={json.photo}/>
           <br />
-        <button onClick={()=>history.goBack()}>戻る</button>
+          <Link to={`/editJson/${json.id}`}>更新</Link>
+          <br />
+          <Link to={"/"}>一覧</Link>
     </div>
   )
 }

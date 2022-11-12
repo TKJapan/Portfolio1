@@ -37,7 +37,11 @@ export const AddJsons = createAsyncThunk('json/post', async(json) => {
     return response.data
 })
 //更新
-
+export const EditJson = createAsyncThunk('json/put',async(json) => {
+    const response = await axios.put(`http://localhost:3004/jsons/${json.id}/`, json
+    )
+    return response.data
+})
 //削除
 
 const jsonSlice = createSlice({
@@ -46,7 +50,16 @@ const jsonSlice = createSlice({
     reducers: {
         selectJson(state, action){
             state.selectedJson = action.payload
-        }
+        },
+        // jsonUpdated(state, action) {
+        //     const { id, title, content, photo } = action.payload
+        //     const existingJson = state.find(json => json.id === id)
+        //     if (existingJson) {
+        //         existingJson.title = title
+        //         existingJson.content = content
+        //         existingJson.photo = photo
+        //     }
+        // }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchJsons.fulfilled,(state, action) => {
@@ -61,12 +74,18 @@ const jsonSlice = createSlice({
                 jsons:[action.payload, ...state.jsons],
             }
         })
+        builder.addCase(EditJson.fulfilled,(state,action)=>{
+            return{
+                ...state,
+                json:[action.payload, ...state.jsons],
+            }
+        })
     }
 })
 
 export default jsonSlice.reducer
 
-export const {selectJson } = jsonSlice.actions
+export const {selectJson} = jsonSlice.actions
 
 export const selectAllJsons = state => state.jsons.jsons
 
