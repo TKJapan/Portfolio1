@@ -44,6 +44,9 @@ const jsonSlice = createSlice({
     name: 'json',
     initialState,
     reducers: {
+        selectJson(state, action){
+            state.selectedJson = action.payload
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchJsons.fulfilled,(state, action) => {
@@ -63,9 +66,9 @@ const jsonSlice = createSlice({
 
 export default jsonSlice.reducer
 
-
+export const {selectJson } = jsonSlice.actions
 
 export const selectAllJsons = state => state.jsons.jsons
 
-// export const selectJsonById = (state, jsonId) =>
-//     state.jsons.jsons.find(json => json.id === jsonId)
+export const selectJsonById = (state, jsonId) =>
+     state.jsons.jsons.find(json => json.id === jsonId)

@@ -4,12 +4,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
 } from 'react-router-dom'
 
 // import { PostsList } from './features/posts/PostsList'
 import { JsonsList } from './features/jsons/JsonsList';
 import AddJsonForm from './features/jsons/AddJsonForm'
+import JsonDescription from './features/component/JsonDescription';
 
 function App() {
   return (
@@ -26,10 +27,16 @@ function App() {
               </div>
               <JsonsList />
               {/* <PostsList /> */}
+        
             </React.Fragment>
           )}
           />
-          <Redirect to="/" />
+          <Route 
+            eaxct 
+            path="/description/:jsonId"
+            component={JsonDescription}
+            />
+            <Redirect to="/" />
       </Switch>
     </div>
     </Router>
