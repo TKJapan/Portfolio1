@@ -43,15 +43,15 @@ const AddJsonForm = () => {
 
     return (
     <section>
-      <h2>Add a New Character</h2>
-      <form>
-        <input ref={inputTitle} type="text" placeholder='タイトル入力' onChange={onTitleChanged} className="textbox"/>
-        <input ref={inputContent} type="text" placeholder='コンテンツ入力' onChange={onContentChanged} className="textbox"/>
-        <input ref={inputPhoto} type="text" placeholder='画像のURLを入力' onChange={onPhotoChanged} className="textbox"/>
-        <button type="button" onClick={onSaveJsonClicked} className="button">
+      <h2 className='text-2xl p-3'>Add a New Character</h2>
+      <form className='bg-stone-300 p-3 rounded'>
+        <input ref={inputTitle} type="text" placeholder='タイトル入力' onChange={onTitleChanged} className="border-4 border-indigo-500/100 mx-2"/>
+        <input ref={inputContent} type="text" placeholder='コンテンツ入力' onChange={onContentChanged} className="border-4 border-indigo-500/100 mx-2"/>
+        <input ref={inputPhoto} type="text" placeholder='画像のURLを入力' onChange={onPhotoChanged} className="border-4 border-indigo-500/100 mx-2"/>
+        <button type="button" onClick={onSaveJsonClicked} className="bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1 pl-1 pr-1">
             Save
         </button>
-        <button type="button" onClick={onClearClicked} className="button">
+        <button type="button" onClick={onClearClicked} className="bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1 pl-1 pr-1">
             Clear
         </button>
       </form>

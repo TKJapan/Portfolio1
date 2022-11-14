@@ -17,12 +17,13 @@ export const JsonsList = () => {
   }, [dispatch])
 
   return (
-    <section className='posts-list'>
-        <h2>Characters</h2>
+    <section className=''>
+        <br />
+        <h2 className="text-3xl font-bold">Characters</h2>
         <ul>
         {jsons.map((json, index) => (
 
-          <JsonItem key={index} json={json}/>
+          <JsonItem key={index} json={json} className=""/>
 
         ))}
         </ul>

@@ -32,9 +32,9 @@ const EditJsonForm = ({match}) => {
 
   return (
     <div>
-        <h2>Edit Json</h2>
-        <form>
-            <label htmlFor="postTitle">Charactor Title</label>
+        <h2 className='m-5 text-3xl'>Edit Json</h2>
+        <form className='ml-5 bg-amber-100 w-3/5'>
+            <label className="ml-5 text-xl" htmlFor="postTitle">Charactor Title</label>
             <input
                 type="text"
                 id="jsonTitle"
@@ -42,8 +42,10 @@ const EditJsonForm = ({match}) => {
                 placeholder="input"
                 value={title}
                 onChange={onTitleChanged}
+                className="rounded m-5 border-4 border-indigo-500/100 mx-2"
             />
-            <label htmlFor="postTitle">Charactor Content</label>
+            <br />
+            <label className="ml-5 text-xl" htmlFor="postTitle">Charactor Content</label>
             <input
                 type="text"
                 id="jsonContent"
@@ -51,8 +53,10 @@ const EditJsonForm = ({match}) => {
                 placeholder="input"
                 value={content}
                 onChange={onContentChanged}
+                className="rounded m-5 border-4 border-indigo-500/100 mx-2"
             />
-            <label htmlFor="postTitle">Charactor Photo</label>
+            <br />
+            <label className="ml-5 text-xl" htmlFor="postTitle">Charactor Photo</label>
             <input
                 type="text"
                 id="jsonPhoto"
@@ -60,9 +64,11 @@ const EditJsonForm = ({match}) => {
                 placeholder="input"
                 value={photo}
                 onChange={onPhotoChanged}
+                className="w-3/5 rounded m-5 border-4 border-indigo-500/100 mx-2"
             />
         </form>
-        <button type="button" onClick={onSaveJsonClicked}>
+        <button type="button" onClick={onSaveJsonClicked}
+        className="ml-5 mt-5 bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1 pl-1 pr-1">
             Save
         </button>
     </div>

@@ -28,14 +28,13 @@ const JsonDescription = ({match}) => {
   }
   return (
     <div>
-        <h2>Description</h2>
-          {json.title}
+        <h2 className='text-5xl p-5 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>Description</h2>
+          <span className='text-3xl p-5'>{json.title}</span>
           <br />
-          <img src={json.photo}/>
+          <img src={json.photo} className="rounded-md ml-10"/>
           <br />
-          <Link to={`/editJson/${json.id}`}>更新</Link>
-          <br />
-          <Link to={"/"}>一覧</Link>
+          <Link to={`/editJson/${json.id}`} className="p-2 ml-10 bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1">更新</Link>
+          <Link to={"/"} className="p-2 ml-10 bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1">一覧</Link>
     </div>
   )
 }
