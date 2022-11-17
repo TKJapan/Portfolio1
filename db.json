@@ -7,12 +7,6 @@
       "photo": "https://d1uzk9o9cg136f.cloudfront.net/f/16782943/rc/2022/06/28/c44856254ba14fed776abba603ffc02476ae4419.jpg"
     },
     {
-      "id": "2",
-      "title": "ロキ",
-      "content": "God of Mischief",
-      "photo": "https://disneyplus.disney.co.jp/content/disney/disneyplus/home/program/loki/_jcr_content/par/textbox_component/textbox_component_par/image_text_1851638074/image1.img.jpg/1622009599517.jpg"
-    },
-    {
       "id": "D6XsV0o_sAcWXTxmBq1Al",
       "title": "ナターシャ・ロマノフ",
       "content": "ブラック・ウィドウ",
@@ -37,10 +31,16 @@
       "photo": "https://lumiere-a.akamaihd.net/v1/images/eb_avengers-iw_12450_12452_12450_12531_12510_12531_sp_35479b8e.jpeg?region=0,0,1024,769&width=960"
     },
     {
-      "id": "E6IF_xK5z_CGfYBha9QHG",
-      "title": "ブルース・バナー",
-      "content": "ハルク",
-      "photo": "https://lumiere-a.akamaihd.net/v1/images/th_avengers-iw_12495_12523_12463_591740bc.jpeg"
+      "id": "MfUGyD-4smWX8VcCXqu2q",
+      "title": "ハルク",
+      "content": "ブルース・バナー",
+      "photo": "https://lumiere-a.akamaihd.net/v1/images/eb_avengers-iw_12495_12523_12463_sp_7bc46c7e.jpeg?region=0,0,1024,769&width=960"
+    },
+    {
+      "id": "wASFt2EOWKIEpFYa_LVAi",
+      "title": "キャプテンアメリカ",
+      "content": "スティーブ",
+      "photo": "https://media.vogue.co.jp/photos/5dcbd0600d84cd00083e0b71/master/pass/aflo_26727546.jpg"
     }
   ],
   "comments": [

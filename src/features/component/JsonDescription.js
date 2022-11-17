@@ -1,8 +1,9 @@
 import { createSelector } from '@reduxjs/toolkit'
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, {useState} from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import { DeleteJson } from '../jsons/jsonsSlice'
 
 
 const JsonDescription = ({match}) => {
@@ -18,7 +19,8 @@ const JsonDescription = ({match}) => {
     console.log("find JsonId",jsonId)
 
   const history = useHistory()
-  
+  const dispatch = useDispatch()
+
   if(!json) {
     return (
         <section>
@@ -34,6 +36,7 @@ const JsonDescription = ({match}) => {
           <img src={json.photo} className="rounded-md ml-10"/>
           <br />
           <Link to={`/editJson/${json.id}`} className="p-2 ml-10 bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1">更新</Link>
+          <button onClick={() => dispatch(DeleteJson(json.id))} className="p-2 ml-10 bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1">削除</button>
           <Link to={"/"} className="p-2 ml-10 bg-yellow-300 rounded border-solid border-2 border-lime-600 mx-1">一覧</Link>
     </div>
   )

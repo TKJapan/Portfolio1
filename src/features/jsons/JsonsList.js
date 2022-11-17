@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 export const JsonsList = () => {
 
   const jsons = useSelector(selectAllJsons)
+  console.log("selector",jsons)
   const dispatch = useDispatch()
 
   useEffect(() => {

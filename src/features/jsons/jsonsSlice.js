@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import axios from 'axios'
+import { useHistory } from 'react-router-dom'
 
 const initialState = {
      jsons: [
@@ -7,7 +8,7 @@ const initialState = {
             id: 0,
             title: "",
             content: "",
-            photo: ""
+            photo: "",
         }
      ],
      selectedJson: {
@@ -43,6 +44,12 @@ export const EditJson = createAsyncThunk('json/put',async(json) => {
     return response.data
 })
 //削除
+export const DeleteJson = createAsyncThunk('json/delete',async(id) => {
+    await axios.delete(`http://localhost:3004/jsons/${id}/`
+    )
+    return id
+})
+
 
 const jsonSlice = createSlice({
     name: 'json',
@@ -78,6 +85,13 @@ const jsonSlice = createSlice({
             return{
                 ...state,
                 json:[action.payload, ...state.jsons],
+            }
+        })
+        builder.addCase(DeleteJson.fulfilled,(state,action)=>{
+            return{
+                ...state,
+                json: state.jsons.filter((j) => j.id !== action.payload),
+                selectedJson: { id: 0, title: "", content: "", photo: ""}
             }
         })
     }
