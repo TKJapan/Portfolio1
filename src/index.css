@@ -1,6 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* :root {
+  --color: #3671de;
+  --position: 0;
+  --raduius: 0;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inputContainer label {
+  margin-right: 10px;
+}
+
+.scroll {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.box {
+  transform: translateX(var(--position));
+  background: var(--color);
+  border-radius: var(--radius);
+  width: 100px;
+  height: 100px;
+  transition: width 2s;
+} */
+
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
