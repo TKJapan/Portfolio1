@@ -9,7 +9,7 @@ export const JsonsList = () => {
 
 
 const [widthValue, setWidthValue] = useState("0")
-const onwidthChange = e => setWidthValue(e.target.value)
+const onWidthChange = e => setWidthValue(e.target.value)
 
 const [heightValue, setHeightValue] = useState("0")
 const onHeightChange = e => setHeightValue(e.target.value)
@@ -52,7 +52,7 @@ text-align: center;
     <div className="">
   <div className="">
     <label htmlFor="width">ボタンの長さ</label>
-    <input type="range" name="width" id="width" min="3" max="60" defaultValue={widthValue} onChange={onwidthChange}/>
+    <input type="range" name="width" id="width" min="3" max="60" defaultValue={widthValue} onChange={onWidthChange}/>
     {widthValue}
   </div>
   <div className="">
@@ -73,7 +73,7 @@ text-align: center;
   <div className="">
     <div className="" id="box"></div>
   </div>
-  <div><Box>ボタン</Box></div>
+  <Box>ボタン</Box>
   <br />
   <br />
   </div>
