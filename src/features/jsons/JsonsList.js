@@ -8,10 +8,10 @@ import styled from 'styled-components'
 export const JsonsList = () => {
 
 
-const [widthValue, setWidthValue] = useState("0")
+const [widthValue, setWidthValue] = useState("5")
 const onWidthChange = e => setWidthValue(e.target.value)
 
-const [heightValue, setHeightValue] = useState("0")
+const [heightValue, setHeightValue] = useState("2")
 const onHeightChange = e => setHeightValue(e.target.value)
 
 const [radiusValue, setRadiusValue] = useState("0")

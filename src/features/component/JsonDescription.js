@@ -21,10 +21,10 @@ const JsonDescription = ({match}) => {
   const history = useHistory()
   const dispatch = useDispatch()
 
-  const [widthValue, setWidthValue] = useState("0")
+  const [widthValue, setWidthValue] = useState("7")
   const onWidthChange = e => setWidthValue(e.target.value)
 
-  const [heightValue, setHeightValue] = useState("0")
+  const [heightValue, setHeightValue] = useState("5")
   const onHeightChange = e => setHeightValue(e.target.value)
 
   const [radiusValue, setRadiusValue] = useState("0")
@@ -75,7 +75,7 @@ opacity: ${opacityValue}%;
     {radiusValue}
   </div>  
   <div className="">
-    <label htmlFor="opacity">写真の色</label>
+    <label htmlFor="opacity">写真の透明度</label>
     <input type="range" name="opacity" id="opacity" defaultValue={opacityValue} onChange={onOpacityChange}/>
     {opacityValue}
   </div>
